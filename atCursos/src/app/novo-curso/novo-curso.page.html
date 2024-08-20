@@ -7,7 +7,51 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">novoCurso</ion-title>
+      <ion-title size="large">CADASTRAR NOVO CURSO</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <ion-card>
+    <img
+      alt="Silhouette of mountains"
+      src="https://pbs.twimg.com/profile_images/1609293042107695107/JFfDnTRp_400x400.jpg"
+    />
+    <ion-card-header>
+      <ion-card-title>NOME DO CURSO: {{vw_nome}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-subtitle>
+      MÊS DE INÍCIO
+    </ion-card-subtitle>
+    <ion-card-content>
+      {{vw_inicio}}
+    </ion-card-content>
+    <ion-card-subtitle>
+      DURAÇÃO EM SEMESTRES
+    </ion-card-subtitle>
+    <ion-card-content>
+      {{vw_duracao}}
+    </ion-card-content>
+    <ion-card-subtitle>
+      VALOR DE CADA PARCELA
+    </ion-card-subtitle>
+    <ion-card-content>
+      {{vw_valor}}
+    </ion-card-content>
+  </ion-card>
+
+  {{card}}
+  
+  <ion-input type="text" placeholder="Digite o Nome do Curso" [(ngModel)]="txt_nome"></ion-input>
+  <ion-input type="number" placeholder="Digite o Início do Curso" [(ngModel)]="txt_inicio"></ion-input>
+  <ion-input type="number" placeholder="Digite a Duração do Curso" [(ngModel)]="txt_duracao"></ion-input>
+  <ion-input type="number" placeholder="Digite o Valor do Curso" [(ngModel)]="txt_valor"></ion-input>
+  <ion-button 
+  (click)="guardarForm(txt_nome, txt_inicio, txt_duracao, txt_valor)" 
+  expand="block" 
+  fill="outline" 
+  shape="round">
+  Adicionar Curso
+</ion-button>
+  <!-- input blablabla -->
 </ion-content>
